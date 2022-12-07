@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sails.each do |sail| %>
+      <tr>
+        <th>sail</th>
+        <th><%= sail.content %></th>
+        <% sail.sail_comments.each do |comment| %>
+          <th>Comment</th>
+          <th>
+            <td><%= comment.content %></td>
+          </th>  
+        <% end %>
+        <%= link_to 'Add SailComment', new_sail_sail_comment_path(sail.id) %>
+        <td><%= link_to 'Show', sail %></td>
+        <td><%= link_to 'Edit', edit_sail_path(sail) %></td>
+        <td><%= link_to 'Destroy', sail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sail', new_sail_path %>

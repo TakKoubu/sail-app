@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sail_comment.content %>
+</p>
+
+<p>
+  <strong>Sail:</strong>
+  <%= @sail_comment.sail_id %>
+</p>
+
+<%= link_to 'Edit', edit_sail_comment_path(@sail_comment) %> |
+<%= link_to 'Back', sails_path %>

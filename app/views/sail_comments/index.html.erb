@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sail Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Sail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sail_comments.each do |sail_comment| %>
+      <tr>
+        <td><%= sail_comment.content %></td>
+        <td><%= sail_comment.sail_id %></td>
+        <td><%= link_to 'Show', sail_comment %></td>
+        <td><%= link_to 'Edit', edit_sail_comment_path(sail_comment) %></td>
+        <td><%= link_to 'Destroy', sail_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sail Comment', new_sail_comment_path %>
