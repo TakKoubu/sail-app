@@ -1,9 +1,9 @@
-class saleCommentsController < ApplicationController
+class SaleCommentsController < ApplicationController
   before_action :set_sale_comment, only: %i[ show edit update destroy ]
 
   # GET /sale_comments or /sale_comments.json
   def index
-    @sale_comments = saleComment.all
+    @sale_comments = SaleComment.all
   end
 
   # GET /sale_comments/1 or /sale_comments/1.json
@@ -12,8 +12,8 @@ class saleCommentsController < ApplicationController
 
   # GET /sale_comments/new
   def new
-    @sale_comment = saleComment.new
-    @sale = sale.find(params[:sale_id])
+    @sale_comment = SaleComment.new
+    @sale = Sale.find(params[:sale_id])
   end
 
   # GET /sale_comments/1/edit
@@ -22,7 +22,7 @@ class saleCommentsController < ApplicationController
 
   # POST /sale_comments or /sale_comments.json
   def create
-    sale = sale.find(params[:sale_id])
+    sale = Sale.find(params[:sale_id])
     sale.sale_comments.build(sale_comment_params)
     # @sale_comment = saleComment.new(sale_comment_params)
 

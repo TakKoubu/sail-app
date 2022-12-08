@@ -1,2 +1,2 @@
-module saleCommentsHelper
+module SaleCommentsHelper
 end

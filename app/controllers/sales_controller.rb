@@ -1,9 +1,9 @@
-class salesController < ApplicationController
+class SalesController < ApplicationController
   before_action :set_sale, only: %i[ show edit update destroy ]
 
   # GET /sales or /sales.json
   def index
-    @sales = sale.all
+    @sales = Sale.all
   end
 
   # GET /sales/1 or /sales/1.json
@@ -12,7 +12,7 @@ class salesController < ApplicationController
 
   # GET /sales/new
   def new
-    @sale = sale.new
+    @sale = Sale.new
   end
 
   # GET /sales/1/edit
@@ -21,7 +21,7 @@ class salesController < ApplicationController
 
   # POST /sales or /sales.json
   def create
-    @sale = sale.new(sale_params)
+    @sale = Sale.new(sale_params)
 
     respond_to do |format|
       if @sale.save
@@ -60,7 +60,7 @@ class salesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
-      @sale = sale.find(params[:id])
+      @sale = Sale.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

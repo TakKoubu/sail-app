@@ -1,3 +1,3 @@
-class saleComment < ApplicationRecord
+class SaleComment < ApplicationRecord
   belongs_to :sale
 end
