@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20221206020659) do
 
-  create_table "sail_comments", force: :cascade do |t|
+  create_table "sale_comments", force: :cascade do |t|
     t.text "content"
-    t.integer "sail_id"
+    t.integer "sale_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sail_id"], name: "index_sail_comments_on_sail_id"
+    t.index ["sale_id"], name: "index_sale_comments_on_sale_id"
   end
 
-  create_table "sails", force: :cascade do |t|
+  create_table "sales", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

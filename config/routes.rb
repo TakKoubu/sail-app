@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :sails do
-    resources :sail_comments
+  resources :sales do
+    resources :sale_comments
   end
 end

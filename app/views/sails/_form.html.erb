@@ -1,10 +1,10 @@
-<%= form_with(model: sail, local: true) do |form| %>
-  <% if sail.errors.any? %>
+<%= form_with(model: sale, local: true) do |form| %>
+  <% if sale.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(sail.errors.count, "error") %> prohibited this sail from being saved:</h2>
+      <h2><%= pluralize(sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
 
       <ul>
-      <% sail.errors.full_messages.each do |message| %>
+      <% sale.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content, id: :sail_content %>
+    <%= form.text_area :content, id: :sale_content %>
   </div>
 
   <div class="actions">

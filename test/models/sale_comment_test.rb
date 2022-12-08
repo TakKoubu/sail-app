@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SailTest < ActiveSupport::TestCase
+class saleCommentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

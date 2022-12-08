@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sails</h1>
+<h1>sales</h1>
 
 <table>
   <thead>
@@ -11,20 +11,20 @@
   </thead>
 
   <tbody>
-    <% @sails.each do |sail| %>
+    <% @sales.each do |sale| %>
       <tr>
-        <th>sail</th>
-        <th><%= sail.content %></th>
-        <% sail.sail_comments.each do |comment| %>
+        <th>sale</th>
+        <th><%= sale.content %></th>
+        <% sale.sale_comments.each do |comment| %>
           <th>Comment</th>
           <th>
             <td><%= comment.content %></td>
           </th>  
         <% end %>
-        <%= link_to 'Add SailComment', new_sail_sail_comment_path(sail.id) %>
-        <td><%= link_to 'Show', sail %></td>
-        <td><%= link_to 'Edit', edit_sail_path(sail) %></td>
-        <td><%= link_to 'Destroy', sail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'Add saleComment', new_sale_sale_comment_path(sale.id) %>
+        <td><%= link_to 'Show', sale %></td>
+        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Sail', new_sail_path %>
+<%= link_to 'New sale', new_sale_path %>
